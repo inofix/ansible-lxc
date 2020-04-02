@@ -45,4 +45,3 @@ Author Information
 ------------------
 
 * Michael Lustenberger at [inofix.ch](http://www.inofix.ch)
-
