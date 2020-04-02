@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Michael Lustenberger
+  description: Install LXC, plain and quick.
+  company: INOFIX GmbH
+
+  license: license (GPLv3)
+  min_ansible_version: 2.2.1
+  platforms:
+  - name: Debian
+
+  galaxy_tags:
+    - containers
+    - lxc
+
+dependencies:
+  - { role: inofix.yapkg, yapkg__group_name: 'lxc', yapkg__names: '{{ lxc__yapkg__names }}', when: '{{ lxc__yapkg__names is not string and lxc__yapkg__names is iterable }}' }
+  - { role: inofix.yapkg, yapkg__group_name: 'lxc', yapkg__list: '{{ lxc__yapkg__list }}', when: '{{ lxc__yapkg__list is not string and lxc__yapkg__list is iterable }}' }
+
