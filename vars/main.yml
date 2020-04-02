@@ -1,0 +1,5 @@
+---
+# vars file for ansible-lxc
+
+lxc__yapkg__names: '{% if app__lxc__yapkg__list is not defined or app__lxc__yapkg__list is none %}{{ app__lxc__yapkg__names | d(default__lxc__yapkg__names) }}{% endif %}'
+lxc__yapkg__list: '{% if app__lxc__yapkg__list is defined and app__lxc__yapkg__list is not none and app__lxc__yapkg__list is not string and app__lxc__yapkg__list is iterable %}{{ app__lxc__yapkg__list }}{% endif %}'

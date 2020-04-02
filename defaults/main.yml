@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-lxc
+## default is debian style, for other distro support
+## take a look at os__pkg_name and yapkg_list
+default__lxc__yapkg__names:
+  - 'lxc'
